@@ -9,7 +9,7 @@ use Data::Dumper;
 ############################################################################
 
 # Define the host first.  This will be the FQDN of your satellite system.
-my $HOST       = 'vicpsat01.reecenet.org';
+my $HOST       = '<hostname>';
 
 # Now we create the client object that will be used throughout the session.
 
@@ -20,7 +20,7 @@ my $client = new Frontier::Client(url => "http://$HOST/rpc/api");
 #
 #   http://$HOST/rpc/api/auth/login/
 
-my $session = $client->call('auth.login', 'apiuser', 'apiuser!');
+my $session = $client->call('auth.login', '<api-user>', 'api-user!');
 
 ############################################################################
 #   System calls.                                                          #
